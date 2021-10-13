@@ -6,6 +6,8 @@ spring:
     password:
     generate-unique-name: false
     diverClassName: org.h2.Driver
+    hikari:
+      maximum-pool-size: 4
   h2:
     console:
       enabled: true
@@ -16,3 +18,7 @@ mybatis:
     mybatis-mapper/**/*.xml
   configuration:
     map-underscore-to-camel-case: true
+  type-aliases-package: com.example.mybatis.model
+logging:
+  level:
+    com.example.mybatis.repository : TRACE
